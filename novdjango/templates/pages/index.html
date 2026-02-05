@@ -1,0 +1,28 @@
+
+{% extends 'base.html' %}
+
+
+
+
+{% block content %}
+<div style="margin-top:20px;display:flex;justify-content:center;align-items:center">
+
+<a style="font-size:20px;font-weight:larger;color: white;margin-right:20px" href="{% url 'index' %}">Home</a>
+<a style="font-size:20px;font-weight:larger;color: white;margin-right:20px" href="{% url 'products' %}">Products</a>
+<a style="font-size:20px;font-weight:larger;color: white;margin-right:20px;" href="{% url 'about' %}">About</a>
+<a style="font-size:20px;font-weight:larger;color: white;margin-right:20px;" href="{% url 'contact' %}">Contact</a>
+<a style="font-size:20px;font-weight:larger;color: white;margin-right:20px;" href="{% url 'admin' %}">Admin</a>
+</div>
+
+{% load static %}
+
+<div style="margin-top:20px;display:flex;justify-content:center;align-items:center">
+<img style="margin-top:20px;" src="{% static 'image/intro.png' %}" alt="Home Image" width="80%" height="500">
+</div>
+
+<h1>Welcome to the Home Page</h1>
+
+
+
+
+{% endblock %}

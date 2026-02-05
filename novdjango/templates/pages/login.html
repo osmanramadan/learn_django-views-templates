@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<div style="margin-top:20px;display:flex;justify-content:center;align-items:center">
+
+<a style="font-size:20px;font-weight:larger;color: white;margin-right:20px" href="{% url 'index' %}">Home</a>
+<a style="font-size:20px;font-weight:larger;color: white;margin-right:20px" href="{% url 'products' %}">Products</a>
+<a style="font-size:20px;font-weight:larger;color: white;margin-right:20px;" href="{% url 'about' %}">About</a>
+<a style="font-size:20px;font-weight:larger;color: white;margin-right:20px;" href="{% url 'contact' %}">Contact</a>
+<a style="font-size:20px;font-weight:larger;color: white;margin-right:20px;" href="{% url 'admin' %}">Admin</a>
+</div>
+
+
+<h1>Welcome to Login </h1>
+
+
+
+<form method="post">
+    {% csrf_token %}
+     <!--
+    <label>Username:</label>
+    <input type="text" name="username" required><br><br>
+
+    <label>Password:</label>
+    <input type="password" name="password" required><br><br>
+-->
+     {{ form}}
+
+    <input type="submit" value="Login">
+</form>
+
+
+
+
+
+{% endblock %}

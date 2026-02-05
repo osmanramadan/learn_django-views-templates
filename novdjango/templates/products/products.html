@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div style="margin-top:20px;display:flex;justify-content:center;align-items:center">
+
+<a style="font-size:20px;font-weight:larger;color: white;margin-right:20px" href="{% url 'index' %}">Home</a>
+<a style="font-size:20px;font-weight:larger;color: white;margin-right:20px" href="{% url 'products' %}">Products</a>
+<a style="font-size:20px;font-weight:larger;color: white;margin-right:20px;" href="{% url 'about' %}">About</a>
+<a style="font-size:20px;font-weight:larger;color: white;margin-right:20px;" href="{% url 'contact' %}">Contact</a>
+<a style="font-size:20px;font-weight:larger;color: white;margin-right:20px;" href="{% url 'admin' %}">Admin</a>
+
+</div>
+
+<h1 style="color: white;">Products num :{{num}}</h1>
+{%for product in products %}
+    <h1 style="color:white">{{ product.name }} - {{ product.price }}</h1>
+    <p>{{ product.content }}</p>
+    <img src="{{ product.image.url}}" alt="{{ product.name }}">
+{% endfor %}
+
+{% endblock content %}
